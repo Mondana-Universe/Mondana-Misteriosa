@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a:visited {
+    color: blue;
+}
+a {
+    color: blue;
+}
+@font-face {
+    font-family: 'MoglanDemo';
+    src: url('../fonts/MoglanDemo.woff2') format('woff2'),
+        url('../fonts/MoglanDemo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Seagram tfb';
+    src: url('../fonts/Seagramtfb.woff') format('woff2'),
+        url('../fonts/Seagramtfb.woff2') format('woff');
+    font-weight: 1000;
+    font-style: normal;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    margin-left: 4px;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+ol , ul , li, a {
+    text-decoration: none;
+    list-style: none;
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+header.top {
+    background-color: #9ace48;
+    padding: 8px 0;
+    font-family: sans-serif;
+    color: white;
+    font-size: 14px;
+}
+header.top section.wrapper { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.top section.wrapper span { 
+    
+}
+
+header.top section.wrapper ul { 
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+header.top section.wrapper ul small {
+    font-size: 14px;
+    font-weight: bold;
+}
+header.top section.wrapper ul li { 
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+}
+header.top section.wrapper ul li a { 
+    color: white;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+header.top section.wrapper ul li a img {
+    display: block;
+    width: 100%;
+}
+
+
+header.middle { 
+    padding: 10px 0;
+}
+
+header.middle section.wrapper { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.middle section.wrapper h1 { 
+    width: max-content;
+}
+
+header.middle section.wrapper h1 a { 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 6px;
+}
+header.middle section.wrapper h1 a div.img {
+    width: 60px;
+}
+header.middle section.wrapper h1 a div.img img { 
+    display: block;
+    width: 100%;
+   
+}
+
+header.middle section.wrapper h1 a span { 
+    display: block;
+    width: 50%;
+    font-size: 26px;
+    font-family: MoglanDemo;
+    letter-spacing: .20rem;
+    color: black;
+}
+
+header.middle section.wrapper div.input { 
+    display: flex;
+    align-items: center;
+    border: 1px solid #bebebe;
+}
+
+header.middle section.wrapper div.input input { 
+    padding: 10px 40px 10px 6px;
+    border: none;
+    border-right: 1px solid #bebebe;
+}
+
+header.middle section.wrapper div.input select#Categories { 
+    padding: 10px ;
+    border: none;
+}
+.line { 
+    border:1.5px solid #dfdfdf;
+}
+
+ul.menu { 
+    padding: 2px 0;
+}
+
+ul.menu section.wrapper { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul.menu section.wrapper li {
+    padding: 10px 6px;
+}
+ul.menu section.wrapper li:hover { 
+    background-color: black;
+    color: white;
+}
+
+ul.menu section.wrapper li a { 
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+div.book { 
+    padding: 60px 0;
+}
+
+div.book section.wrapper { 
+    display: flex;
+}
+
+div.book section.wrapper div.bookImage { 
+    width: 22%;
+    padding: 2px;
+    border: 1px solid grey;
+    margin-right: 28px;
+    height: 380px;
+}
+
+div.book section.wrapper div.bookImage div.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+div.book section.wrapper div.bookImage div.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+div.book section.wrapper div.bookImage div.flip-card:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+  }
+div.book section.wrapper div.bookImage div.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+div.book section.wrapper div.bookImage div.flip-card-back {
+    transform: rotateY(-180deg);
+}
+
+
+div.book section.wrapper div.bookImage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+div.book section.wrapper div.bookDetails { 
+    width: 40%;
+}
+div.book section.wrapper div.bookDetails hr.line {
+    width: 80%;
+}
+div.book section.wrapper div.bookDetails h2 { 
+    font-family: Seagram tfb;
+    font-size: 32px;
+    text-shadow: 3px 3px #bebebe;
+    text-align: center;
+    width: 80%;
+}
+
+div.book section.wrapper div.bookDetails h3 { 
+    font-family: Seagram tfb;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-size: 24px;
+    text-align: center;
+    width: 80%;
+
+}
+
+div.book section.wrapper div.bookDetails h4 { 
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+    width: 80%;
+
+}
+div.book section.wrapper div.bookDetails ul { 
+    margin-top: 12px;
+}
+div.book section.wrapper div.bookDetails ul li { 
+    margin-bottom: 6px;
+    font-family: sans-serif;
+    letter-spacing: 0.065rem;
+}
+div.book section.wrapper div.bookDetails ul li b { 
+
+}
+div.book section.wrapper div.price { 
+    border: 1px solid #bebebe;
+    padding: 40px;
+    height: max-content;
+    box-shadow: 4px 4px 4px #bebebe;
+}
+div.book section.wrapper div.price span.publisher { 
+    display: block;
+    font-size: 20px;
+}
+
+div.book section.wrapper div.price span.amount { 
+    display: block;
+    font-size: 28px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+div.book section.wrapper div.price hr.line { 
+
+}
+
+div.book section.wrapper div.price span.stock { 
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 6px;
+    font-size: 18px;
+}
+
+div.book section.wrapper div.price span.stock img { 
+    width: 25px;
+    display: block;
+}
+div.book section.wrapper div.price a.buy {
+    background-color: #fb641b;
+    padding: 20px 50px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+div.book section.wrapper div.price a.refer {
+    border: 1px solid #bebebe;
+    padding:8px 16px;
+    display: block;
+    border-radius: 26px;
+    margin: 20px 0;
+    color: darkslategrey;
+    font-weight: 400;
+}
+
+
+
+
+section.summary h5 {
+    font-size: 22px;
+    font-family: sans-serif;
+    margin-bottom: 16px;
+    margin-top: 26px;
+    font-weight: normal;
+}
+section.summary p {
+    font-size: 14px;
+    line-height: 170%;
+    letter-spacing: 0.08rem;
+}
+
+
+
+
+
+
