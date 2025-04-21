@@ -51,11 +51,11 @@
     <hr class="line">
     <ul class="menu">
        <section class="wrapper">
-            <li><a href="">HOME</a></li>
-            <li><a href="">ABOUT SAMEER</a></li>
-            <li><a href="">GALLERY</a></li>
-            <li><a href="">UPCOMING BOOKS</a></li>
-            <li><a href="">UPDATES</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="sameer.html">ABOUT SAMEER</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="upcoming.html">UPCOMING BOOKS</a></li>
+            <li><a href="updates.html">UPDATES</a></li>
             <li>CONTACT <b class="triangle"></b></li>
             <li>FOLLOW US <b class="triangle"></b></li>
        </section>
@@ -88,15 +88,15 @@
                     <li><b>ISBN : </b>978-93-340-8099-5</li>
                     <li><b>Binding : </b>Normal</li>
                     <li><b>Publishing date : </b>July 2025</li>
-                    <li><b>Publisher : </b><a href="https://www.erabooks.com">Era Books</a></li>
+                    <li><b>Publisher : </b><a href="https://www.erabooks.com">ERA BOOKS</a></li>
                     <li><b>Edition : </b>First</li>
-                    <li><b>No of pages : </b>270</li>
+                    <li><b>No of pages : </b>274</li>
                     <li><b>Language : </b>Malayalam</li>
                 </ul>
             </div>
             <div class="price">
                 <span class="publisher">Publisher : Era Books</span>
-                <span class="amount">₹399.00</span>
+                <span class="amount">₹299.00</span>
                 <hr class="line">
                 <span class="stock"><img src="assets/tick-removebg-preview.png" alt="">In Stock</span>
                 <hr class="line">
@@ -119,6 +119,39 @@
                 വിധിക്കപ്പെട്ട ഒരുകൂട്ടം മനുഷ്യരുടെയും 
                 ആ കൊടുമുടിയിലൊളിപ്പിക്കപ്പെട്ട നിധി കൈക്കലാക്കാനെത്തുന്ന മറ്റൊരു കൂട്ടം മനുഷ്യരുടെയും കഥ...
             </p>
+        </section>
+        <hr class="line" style="margin-top: 26px;">
+        <section class="review">
+            <section class="wrapper">
+                <div class="create-review">
+                        <h5>Write a review</h5>
+                        <h6>Book name : Mondana Misteriosa</h6>
+                        <label for="user_name">Your Name : </label>
+                        <input type="text" name="user_name" id="user_name">
+                        <label for="rating" class="rating">Your rating out of 5 <select name="rating" id="rating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select></label>
+                        
+                        <label for="message">Your Review : </label>
+                        <textarea name="message" id="message"></textarea>
+                        <button id="submit-review">Submit</button>
+                    
+                </div>
+                <div class="reviews">
+                    <h5>Reviews</h5>
+                    <ul id="reviews-list">
+                        <li>
+                            <h4>By Sameer</h4>
+                            <h5>5/5 Rating</h5>
+                            <p>Amazing book... Must read one....Loved it!!!!</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </section>
     </section>
 </body>

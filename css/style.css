@@ -10,6 +10,24 @@ a {
     color: blue;
 }
 @font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Italic.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'MoglanDemo';
     src: url('../fonts/MoglanDemo.woff2') format('woff2'),
         url('../fonts/MoglanDemo.woff') format('woff');
@@ -23,6 +41,14 @@ a {
         url('../fonts/Seagramtfb.woff2') format('woff');
     font-weight: 1000;
     font-style: normal;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 .triangle {
     width: 0;
@@ -155,6 +181,10 @@ ul.menu section.wrapper {
 }
 ul.menu section.wrapper li {
     padding: 10px 6px;
+    display: flex;
+    align-items: center;
+    font-family: Roboto Condensed;
+    cursor: pointer;
 }
 ul.menu section.wrapper li:hover { 
     background-color: black;
@@ -234,8 +264,8 @@ div.book section.wrapper div.bookDetails h2 {
 
 div.book section.wrapper div.bookDetails h3 { 
     font-family: Seagram tfb;
-    margin-bottom: 8px;
-    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     font-size: 24px;
     text-align: center;
     width: 80%;
@@ -254,9 +284,11 @@ div.book section.wrapper div.bookDetails ul {
     margin-top: 12px;
 }
 div.book section.wrapper div.bookDetails ul li { 
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     font-family: sans-serif;
     letter-spacing: 0.065rem;
+    font-family: Roboto Condensed;
+    font-weight: 400;
 }
 div.book section.wrapper div.bookDetails ul li b { 
 
@@ -266,10 +298,12 @@ div.book section.wrapper div.price {
     padding: 40px;
     height: max-content;
     box-shadow: 4px 4px 4px #bebebe;
+    margin-left: auto;
 }
 div.book section.wrapper div.price span.publisher { 
     display: block;
     font-size: 20px;
+    font-family: Roboto Condensed;
 }
 
 div.book section.wrapper div.price span.amount { 
@@ -277,6 +311,7 @@ div.book section.wrapper div.price span.amount {
     font-size: 28px;
     margin-top: 8px;
     margin-bottom: 12px;
+    font-family: Roboto Condensed;
 }
 
 div.book section.wrapper div.price hr.line { 
@@ -321,17 +356,122 @@ div.book section.wrapper div.price a.refer {
 
 section.summary h5 {
     font-size: 22px;
-    font-family: sans-serif;
+    font-family: Roboto Condensed;
     margin-bottom: 16px;
     margin-top: 26px;
-    font-weight: normal;
+    font-weight: 400;
 }
 section.summary p {
-    font-size: 14px;
-    line-height: 170%;
+    font-size: 20px;
+    line-height: 130%;
     letter-spacing: 0.08rem;
 }
 
+
+
+
+
+section.review{ 
+    width: 100%;
+    padding-bottom: 30px;
+}
+section.review section.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+section.review div.create-review { 
+    width: 48%;
+}
+section.review div.create-review h5 { 
+    font-size: 22px;
+    font-family: Roboto Condensed;
+    margin-bottom: 16px;
+    margin-top: 26px;
+    font-weight: 400;
+}
+
+section.review div.create-review h6 { 
+    font-size: 16px;
+    font-family: Roboto Condensed;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    font-weight: normal;
+}
+
+section.review div.create-review label { 
+    font-family: sans-serif;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 6px;
+}
+section.review div.create-review label.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+section.review div.create-review #review_title { 
+    width: 100%;
+    padding: 4px;
+    height: 30px;
+    margin-bottom: 16px;
+}
+
+section.review div.create-review #rating { 
+    width: auto;
+    margin-left: 8px;
+    padding: 4px;
+    
+}
+
+section.review div.create-review #message { 
+    width: 100%;
+    padding: 6px;
+    height: 100px;
+}
+section.review div.create-review #user_name {
+    width: 100%;
+    padding: 4px;
+    height: 30px;
+    margin-bottom: 16px;
+}
+
+section.review div.create-review #submit-review {
+    background-color: #9ace48;
+    color: white;
+    font-family: Roboto Condensed;
+    border: none;
+    padding: 10px 24px;
+    font-size: 18px;
+    display: block;
+    margin-top: 30px;
+}
+section.review div.reviews {
+    width: 48%;
+}
+section.review ul#reviews-list li {
+    border: 1px solid #bebebe;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+section.review ul#reviews-list h4 {
+    text-transform: uppercase;
+    font-family: Roboto Condensed;
+    font-weight: normal;
+    font-size:18px;
+}
+section.review ul#reviews-list h5 {
+    font-family: Roboto Condensed;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 10px 0;
+}
+section.review ul#reviews-list p {
+    font-weight: normal;
+    font-size: 16px;
+    font-family: Roboto Condensed;
+}
 
 
 
