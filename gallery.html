@@ -4,16 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mondana Misteriosa | Gallery</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-    </style>
+    <link rel="icon" href="assets/sameer.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    
 </head>
 <body>
-    <h1>Gallery Page</h1>
+  <header class="top">
+    <section class="wrapper">
+      <span
+        >For more information : +91 9074741522 |
+        sameerpanavoor@gmail.com</span
+      >
+      <ul>
+        <small>Welcome Guest</small>
+        <li>
+          <a href="https://www.facebook.com/samee.tpb" target="_blank"
+            ><img src="assets/facebook.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/mondana_misteriosa/"
+            target="_blank"
+            ><img src="assets/instagram.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://youtube.com/@luxuryindians6843?si=B0f2Zc6XvvfNIpI0"
+            target="_blank"
+            ><img src="assets/youtube.png" alt=""
+          /></a>
+        </li>
+      </ul>
+    </section>
+  </header>
+
+  <header class="middle">
+    <section class="wrapper">
+      <h1>
+        <a href="https://www.facebook.com/samee.tpb">
+          <div class="img">
+            <img src="assets/sameer.png" alt="" />
+          </div>
+          <span>SAMEER PANAVOOR</span>
+        </a>
+      </h1>
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="input">
+        <input type="text" placeholder="What are you looking for?" />
+        <select name="Categories" id="Categories">
+          <option value="All Categories">All Categories</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Comic">Comic</option>
+          <option value="Horror">Horror</option>
+          <option value="Scientific">Scientific</option>
+          <option value="Action">Action</option>
+          <option value="Thriller">Thriller</option>
+        </select>
+      </div>
+    </section>
+  </header>
+
+    <hr class="line" />
+    <ul class="menu">
+      <section class="wrapper">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sameer.html">ABOUT SAMEER</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="upcoming.html">UPCOMING BOOKS</a></li>
+        <li><a href="updates.html">UPDATES</a></li>
+
+        <!-- Clickable menu item -->
+        <li id="contactTrigger">CONTACT <b class="triangle"></b></li>
+
+        <li id="followTrigger">FOLLOW US <b class="triangle"></b></li>
+      </section>
+    </ul>
+
+    <!-- Submenu placed outside the UL -->
+    <!-- Outside the <ul class="menu"> -->
+    <div id="contactDropdown" class="dropdown-menu">
+      <ul>
+        <li><a href="mailto:sameerpanavoor@gmail.com">Email</a></li>
+        <li><a href="tel:+919074741522">Phone</a></li>
+        <li><a href="#">Address</a></li>
+      </ul>
+    </div>
+
+    <div id="followDropdown" class="dropdown-menu">
+      <ul>
+        <li><a href="https://www.instagram.com/mondana_misteriosa?igsh=ZGUzMzM3NWJiOQ==">Instagram</a></li>
+        <li><a href="https://www.facebook.com/samee.tpb?mibextid=ZbWKwL">Facebook</a></li>
+        <li><a href="https://youtube.com/@luxuryindians6843?si=rRBbYtFj_FnlGNCQ">Youtube</a></li>
+        <li><a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=sameer-a-s-a29420340">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <hr class="line" />
+
+    <section class="gallery">
+        <section class="wrapper">
+          <div class="head">
+            <div class="design"></div>
+            <h2>Book Gallery</h2>
+          </div>
+          <div class="gallery-grid">
+            <img src="assets/bookf.jpg" alt="galleryImage1">
+            <img src="assets/bookb.jpg" alt="galleryImage2">
+            <img src="assets/1.jpg" alt="galleryImage1.1">
+            <img src="assets/2.jpg" alt="galleryImage2.1">
+            <img src="assets/3.jpg" alt="galleryImage3">
+            <img src="assets/4.jpg" alt="galleryImage4">
+            <img src="assets/5.jpg" alt="galleryImage5">
+            <img src="assets/6.jpg" alt="galleryImage6">
+            <img src="assets/7.jpg" alt="galleryImage7">
+            <img src="assets/8.jpg" alt="galleryImage8">
+            <!-- Add more <img> tags as needed -->
+          </div>
+        </section>
+      </section>
+    
+      <hr class="line">
+
 </body>
 </html>

@@ -1,479 +1,805 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 a:visited {
-    color: blue;
+  color: blue;
 }
 a {
-    color: blue;
+  color: blue;
 }
 @font-face {
-    font-family: 'Roboto Condensed';
-    src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
-        url('../fonts/RobotoCondensed-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Roboto Condensed";
+  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto Condensed';
-    src: url('../fonts/RobotoCondensed-Italic.woff2') format('woff2'),
-        url('../fonts/RobotoCondensed-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Roboto Condensed";
+  src: url("../fonts/RobotoCondensed-Italic.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'MoglanDemo';
-    src: url('../fonts/MoglanDemo.woff2') format('woff2'),
-        url('../fonts/MoglanDemo.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "MoglanDemo";
+  src: url("../fonts/MoglanDemo.woff2") format("woff2"),
+    url("../fonts/MoglanDemo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Seagram tfb';
-    src: url('../fonts/Seagramtfb.woff') format('woff2'),
-        url('../fonts/Seagramtfb.woff2') format('woff');
-    font-weight: 1000;
-    font-style: normal;
+  font-family: "Seagram tfb";
+  src: url("../fonts/Seagramtfb.woff") format("woff2"),
+    url("../fonts/Seagramtfb.woff2") format("woff");
+  font-weight: 1000;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
-        url('../fonts/Inter-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"),
+    url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: "Manjari";
+  src: url("../fonts/Manjari-Regular.woff2") format("woff2"),
+    url("../fonts/Manjari-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manjari";
+  src: url("../fonts/Manjari-Bold.woff2") format("woff2"),
+    url("../fonts/Manjari-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manjari";
+  src: url("../fonts/Manjari-Thin.woff2") format("woff2"),
+    url("../fonts/Manjari-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 .triangle {
-    width: 0;
-    height: 0;
-    display: inline-block;
-    margin-left: 4px;
-    border-top: 4px dashed;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  margin-left: 4px;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
 }
-ol , ul , li, a {
-    text-decoration: none;
-    list-style: none;
+ol,
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
 }
 .wrapper {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 header.top {
-    background-color: #9ace48;
-    padding: 8px 0;
-    font-family: sans-serif;
-    color: white;
-    font-size: 14px;
+  background-color: #9ace48;
+  padding: 8px 0;
+  font-family: sans-serif;
+  color: white;
+  font-size: 14px;
 }
-header.top section.wrapper { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header.top section.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-header.top section.wrapper span { 
-    
+header.top section.wrapper span {
+  width: max-content;
 }
 
-header.top section.wrapper ul { 
-    display: flex;
-    gap: 20px;
-    align-items: center;
+header.top section.wrapper ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 header.top section.wrapper ul small {
-    font-size: 14px;
-    font-weight: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
-header.top section.wrapper ul li { 
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    padding: 6px;
-    border-radius: 50%;
+header.top section.wrapper ul li {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  padding: 6px;
+  border-radius: 50%;
 }
-header.top section.wrapper ul li a { 
-    color: white;
-    font-weight: bold;
-    display: block;
-    width: 100%;
+header.top section.wrapper ul li a {
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: 100%;
 }
 header.top section.wrapper ul li a img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
-
-header.middle { 
-    padding: 10px 0;
+header.middle {
+  padding: 10px 0;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  background-color:#efefef;
 }
 
-header.middle section.wrapper { 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header.middle section.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-header.middle section.wrapper h1 { 
-    width: max-content;
+header.middle section.wrapper h1 {
+  width: max-content;
 }
 
-header.middle section.wrapper h1 a { 
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 6px;
+header.middle section.wrapper h1 a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 6px;
 }
 header.middle section.wrapper h1 a div.img {
-    width: 60px;
+  width: 60px;
 }
-header.middle section.wrapper h1 a div.img img { 
-    display: block;
-    width: 100%;
-   
-}
-
-header.middle section.wrapper h1 a span { 
-    display: block;
-    width: 50%;
-    font-size: 26px;
-    font-family: MoglanDemo;
-    letter-spacing: .20rem;
-    color: black;
+header.middle section.wrapper h1 a div.img img {
+  display: block;
+  width: 100%;
 }
 
-header.middle section.wrapper div.input { 
-    display: flex;
-    align-items: center;
-    border: 1px solid #bebebe;
+header.middle section.wrapper h1 a span {
+  display: block;
+  width: 50%;
+  font-size: 26px;
+  font-family: MoglanDemo;
+  letter-spacing: 0.2rem;
+  color: black;
 }
 
-header.middle section.wrapper div.input input { 
-    padding: 10px 40px 10px 6px;
-    border: none;
-    border-right: 1px solid #bebebe;
+header.middle section.wrapper div.input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bebebe;
 }
 
-header.middle section.wrapper div.input select#Categories { 
-    padding: 10px ;
-    border: none;
-}
-.line { 
-    border:1.5px solid #dfdfdf;
+header.middle section.wrapper div.input input {
+  padding: 10px 40px 10px 6px;
+  border: none;
+  border-right: 1px solid #bebebe;
 }
 
-ul.menu { 
-    padding: 2px 0;
+header.middle section.wrapper div.input select#Categories {
+  padding: 10px;
+  border: none;
+}
+.line {
+  border: 1.5px solid #dfdfdf;
 }
 
-ul.menu section.wrapper { 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+ul.menu {
+  padding: 2px 0;
+}
+
+ul.menu section.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 ul.menu section.wrapper li {
-    padding: 10px 6px;
-    display: flex;
-    align-items: center;
-    font-family: Roboto Condensed;
-    cursor: pointer;
+  padding: 10px 6px;
+  display: flex;
+  align-items: center;
+  font-family: Roboto Condensed;
+  cursor: pointer;
 }
-ul.menu section.wrapper li:hover { 
-    background-color: black;
-    color: white;
-}
-
-ul.menu section.wrapper li a { 
-    color: inherit;
-    display: flex;
-    align-items: center;
+ul.menu section.wrapper li:hover {
+  background-color: black;
+  color: white;
 }
 
-div.book { 
-    padding: 60px 0;
+ul.menu section.wrapper li a {
+  color: inherit;
+  display: block;
+  align-items: center;
 }
 
-div.book section.wrapper { 
-    display: flex;
+div.book {
+  padding: 60px 0;
 }
 
-div.book section.wrapper div.bookImage { 
-    width: 22%;
-    padding: 2px;
-    border: 1px solid grey;
-    margin-right: 28px;
-    height: 380px;
+div.book section.wrapper {
+  display: flex;
+}
+
+div.book section.wrapper div.bookImage {
+  width: 22%;
+  padding: 2px;
+  border: 1px solid grey;
+  margin-right: 28px;
+  height: 380px;
 }
 
 div.book section.wrapper div.bookImage div.flip-card {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    perspective: 1000px;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
 }
 div.book section.wrapper div.bookImage div.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 div.book section.wrapper div.bookImage div.flip-card:hover .flip-card-inner {
-    transform: rotateY(-180deg);
-  }
-div.book section.wrapper div.bookImage div.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+  transform: rotateY(-180deg);
+}
+div.book section.wrapper div.bookImage div.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 div.book section.wrapper div.bookImage div.flip-card-back {
-    transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
-
 
 div.book section.wrapper div.bookImage img {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-div.book section.wrapper div.bookDetails { 
-    width: 40%;
+div.book section.wrapper div.bookDetails {
+  width: 40%;
 }
 div.book section.wrapper div.bookDetails hr.line {
-    width: 80%;
+  width: 80%;
 }
-div.book section.wrapper div.bookDetails h2 { 
-    font-family: Seagram tfb;
-    font-size: 32px;
-    text-shadow: 3px 3px #bebebe;
-    text-align: center;
-    width: 80%;
-}
-
-div.book section.wrapper div.bookDetails h3 { 
-    font-family: Seagram tfb;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: 24px;
-    text-align: center;
-    width: 80%;
-
+div.book section.wrapper div.bookDetails h2 {
+  font-family: Seagram tfb;
+  font-size: 32px;
+  text-shadow: 3px 3px #bebebe;
+  text-align: center;
+  width: 80%;
 }
 
-div.book section.wrapper div.bookDetails h4 { 
-    font-family: sans-serif;
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 12px;
-    width: 80%;
-
-}
-div.book section.wrapper div.bookDetails ul { 
-    margin-top: 12px;
-}
-div.book section.wrapper div.bookDetails ul li { 
-    margin-bottom: 10px;
-    font-family: sans-serif;
-    letter-spacing: 0.065rem;
-    font-family: Roboto Condensed;
-    font-weight: 400;
-}
-div.book section.wrapper div.bookDetails ul li b { 
-
-}
-div.book section.wrapper div.price { 
-    border: 1px solid #bebebe;
-    padding: 40px;
-    height: max-content;
-    box-shadow: 4px 4px 4px #bebebe;
-    margin-left: auto;
-}
-div.book section.wrapper div.price span.publisher { 
-    display: block;
-    font-size: 20px;
-    font-family: Roboto Condensed;
+div.book section.wrapper div.bookDetails h3 {
+  font-family: Seagram tfb;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  text-align: center;
+  width: 80%;
 }
 
-div.book section.wrapper div.price span.amount { 
-    display: block;
-    font-size: 28px;
-    margin-top: 8px;
-    margin-bottom: 12px;
-    font-family: Roboto Condensed;
+div.book section.wrapper div.bookDetails h4 {
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 12px;
+  width: 80%;
+}
+div.book section.wrapper div.bookDetails ul {
+  margin-top: 12px;
+}
+div.book section.wrapper div.bookDetails ul li {
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  letter-spacing: 0.065rem;
+  font-family: Roboto Condensed;
+  font-weight: 400;
+}
+div.book section.wrapper div.bookDetails ul li b {
+}
+div.book section.wrapper div.price {
+  border: 1px solid #bebebe;
+  padding: 40px;
+  height: max-content;
+  box-shadow: 4px 4px 4px #bebebe;
+  margin-left: auto;
+}
+div.book section.wrapper div.price span.publisher {
+  display: block;
+  font-size: 20px;
+  font-family: Roboto Condensed;
 }
 
-div.book section.wrapper div.price hr.line { 
-
+div.book section.wrapper div.price span.amount {
+  display: block;
+  font-size: 28px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-family: Roboto Condensed;
 }
 
-div.book section.wrapper div.price span.stock { 
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-    gap: 6px;
-    font-size: 18px;
+div.book section.wrapper div.price hr.line {
 }
 
-div.book section.wrapper div.price span.stock img { 
-    width: 25px;
-    display: block;
+div.book section.wrapper div.price span.stock {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 6px;
+  font-size: 18px;
+}
+
+div.book section.wrapper div.price span.stock img {
+  width: 25px;
+  display: block;
 }
 div.book section.wrapper div.price a.buy {
-    background-color: #fb641b;
-    padding: 20px 50px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-family: sans-serif;
-    color: white;
-    display: block;
-    margin-top: 20px;
-    text-align: center;
+  background-color: #fb641b;
+  padding: 20px 50px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
 }
 div.book section.wrapper div.price a.refer {
-    border: 1px solid #bebebe;
-    padding:8px 16px;
-    display: block;
-    border-radius: 26px;
-    margin: 20px 0;
-    color: darkslategrey;
-    font-weight: 400;
+  border: 1px solid #bebebe;
+  padding: 8px 16px;
+  display: block;
+  border-radius: 26px;
+  margin: 20px 0;
+  color: darkslategrey;
+  font-weight: 400;
 }
-
-
-
 
 section.summary h5 {
-    font-size: 22px;
-    font-family: Roboto Condensed;
-    margin-bottom: 16px;
-    margin-top: 26px;
-    font-weight: 400;
+  font-size: 22px;
+  font-family: Roboto Condensed;
+  margin-bottom: 16px;
+  margin-top: 26px;
+  font-weight: 400;
 }
 section.summary p {
-    font-size: 20px;
-    line-height: 130%;
-    letter-spacing: 0.08rem;
+  font-size: 17px;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-align: justify;
+  font-family: Manjari;
 }
 
-
-
-
-
-section.review{ 
-    width: 100%;
-    padding-bottom: 30px;
+section.review {
+  width: 100%;
+  padding-bottom: 30px;
 }
 section.review section.wrapper {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-section.review div.create-review { 
-    width: 48%;
+section.review div.create-review {
+  width: 48%;
 }
-section.review div.create-review h5 { 
-    font-size: 22px;
-    font-family: Roboto Condensed;
-    margin-bottom: 16px;
-    margin-top: 26px;
-    font-weight: 400;
-}
-
-section.review div.create-review h6 { 
-    font-size: 16px;
-    font-family: Roboto Condensed;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    font-weight: normal;
+section.review div.create-review h5 {
+  font-size: 22px;
+  font-family: Roboto Condensed;
+  margin-bottom: 16px;
+  margin-top: 26px;
+  font-weight: 400;
 }
 
-section.review div.create-review label { 
-    font-family: sans-serif;
-    font-weight: normal;
-    display: block;
-    margin-bottom: 6px;
+section.review div.create-review h6 {
+  font-size: 16px;
+  font-family: Roboto Condensed;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  font-weight: normal;
+}
+
+section.review div.create-review label {
+  font-family: sans-serif;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 6px;
 }
 section.review div.create-review label.rating {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-section.review div.create-review #review_title { 
-    width: 100%;
-    padding: 4px;
-    height: 30px;
-    margin-bottom: 16px;
+section.review div.create-review #review_title {
+  width: 100%;
+  padding: 4px;
+  height: 30px;
+  margin-bottom: 16px;
 }
 
-section.review div.create-review #rating { 
-    width: auto;
-    margin-left: 8px;
-    padding: 4px;
-    
+section.review div.create-review #rating {
+  width: auto;
+  margin-left: 8px;
+  padding: 4px;
 }
 
-section.review div.create-review #message { 
-    width: 100%;
-    padding: 6px;
-    height: 100px;
+section.review div.create-review #message {
+  width: 100%;
+  padding: 6px;
+  height: 100px;
 }
 section.review div.create-review #user_name {
-    width: 100%;
-    padding: 4px;
-    height: 30px;
-    margin-bottom: 16px;
+  width: 100%;
+  padding: 4px;
+  height: 30px;
+  margin-bottom: 16px;
 }
 
 section.review div.create-review #submit-review {
-    background-color: #9ace48;
-    color: white;
-    font-family: Roboto Condensed;
-    border: none;
-    padding: 10px 24px;
-    font-size: 18px;
-    display: block;
-    margin-top: 30px;
+  background-color: #9ace48;
+  color: white;
+  font-family: Roboto Condensed;
+  border: none;
+  padding: 10px 24px;
+  font-size: 18px;
+  display: block;
+  margin-top: 30px;
 }
 section.review div.reviews {
-    width: 48%;
+  width: 48%;
 }
 section.review ul#reviews-list li {
-    border: 1px solid #bebebe;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+  border: 1px solid #bebebe;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 section.review ul#reviews-list h4 {
-    text-transform: uppercase;
-    font-family: Roboto Condensed;
-    font-weight: normal;
-    font-size:18px;
+  text-transform: uppercase;
+  font-family: Roboto Condensed;
+  font-weight: normal;
+  font-size: 18px;
 }
 section.review ul#reviews-list h5 {
-    font-family: Roboto Condensed;
-    font-weight: normal;
-    font-size: 16px;
-    margin: 10px 0;
+  font-family: Roboto Condensed;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 10px 0;
 }
 section.review ul#reviews-list p {
-    font-weight: normal;
-    font-size: 16px;
-    font-family: Roboto Condensed;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: Roboto Condensed;
 }
 
+.gallery {
+  padding: 60px 0;
+  background-color: #fff;
+}
 
+.gallery h2 {
+  text-align: center;
+  font-family: "Seagram tfb";
+  font-size: 32px;
+  color: #222;
+}
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
 
+.gallery-grid img {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+div.notification {
+  width: 100%;
+  height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.updates .update {
+}
+section.updates .update img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+section.updates .update p {
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-align: justify;
+  font-family: Manjari;
+  margin-top: 16px;
+}
+
+.contact-submenu {
+  position: absolute;
+  top: 100%; /* Will be positioned via JS */
+  left: 0;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 85px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+  z-index: 1000;
+}
+
+.contact-submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.contact-submenu li {
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.contact-submenu li:first-child {
+  border-top: none;
+}
+
+.contact-submenu a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact-submenu.show {
+  opacity: 1;
+  max-height: 500px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* JS sets this via top/left */
+  left: 0;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1000;
+
+  /* Hidden by default */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease, visibility 0.4s ease;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  max-height: 500px; /* or adjust as needed */
+  visibility: visible;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+.dropdown-menu li:hover {
+  background-color: #dfdfdf;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.design {
+  width: 10px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #9ace48;
+  margin-right: 12px;
+}
+.gallery .head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+/* Hamburger menu styles */
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 4px 0;
+  background: #222;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(14.5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media all and (max-width: 768px) {
+  div.book section.wrapper {
+    flex-wrap: wrap;
+  }
+  div.book section.wrapper div.bookImage {
+    width: 40%;
+  }
+  div.book section.wrapper div.bookDetails {
+    flex: 1;
+  }
+  div.book section.wrapper div.price {
+    margin-left: 0;
+    margin-top: 16px;
+    width: 100%;
+  }
+  ul.menu section.wrapper li a {
+    font-size: 14px;
+  }
+  ul.menu section.wrapper li {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 540px) {
+  header.top section.wrapper {
+    flex-wrap: wrap;
+  }
+  .hamburger {
+    display: flex;
+  }
+  header.top section.wrapper ul li {
+    display: none;
+  }
+  header.top section.wrapper span {
+    font-size: 10px;
+    width: 100%;
+  }
+  header.top section.wrapper ul small {
+    display: none;
+  }
+  header.middle section.wrapper {
+    flex-wrap: wrap;
+  }
+  header.middle section.wrapper div.input {
+    display: none;
+  }
+  header.middle section.wrapper h1 a div.img {
+    width: 40px;
+  }
+  header.middle section.wrapper h1 a span {
+    font-size: 16px;
+  }
+  ul.menu section.wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); /* start slightly above */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 95px; /* adjust based on your header */
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  ul.menu section.wrapper li {
+    width: 100%;
+    justify-content: center;
+  }
+  ul.menu section.wrapper li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  ul.menu section.wrapper.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* slide to position */
+  }
+
+  div.book section.wrapper div.bookImage {
+    margin-right: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+  div.book section.wrapper div.bookDetails {
+    margin-top: 12px;
+  }
+  div.book section.wrapper div.bookDetails h2 {
+    width: 100%;
+  }
+  div.book section.wrapper div.bookDetails h3 {
+    width: 100%;
+  }
+  div.book section.wrapper div.bookDetails h4 {
+    width: 100%;
+  }
+  section.review section.wrapper {
+    flex-wrap: wrap;
+  }
+  section.review div.create-review {
+    width: 100%;
+  }
+  section.review div.reviews {
+    width: 100%;
+  }
+  div.book section.wrapper div.bookDetails hr.line {
+    width: 100%;
+  }
+  .profile-pic {
+    display: none;
+  }
+  .photos img {
+    width: 100%;
+  }
+}

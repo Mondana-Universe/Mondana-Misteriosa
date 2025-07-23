@@ -1,19 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mondana Misteriosa | Sameer Panavoor</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sameer Panavoor - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/sameer.png">
+    <script defer src="js/script.js"></script>
     <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f2f5;
+        color: #1c1e21;
+      }
+      .profile-container {
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+      .cover-photo {
+        width: 100%;
+        height: 250px;
+        background: url("./assets/mondanaCovera.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .profile-section {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+      }
+      .profile-pic {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 4px solid white;
+        margin-top: -80px;
+        background: url("./assets/sameer.png") no-repeat center center/cover;
+      }
+      .profile-info {
+        margin-left: 20px;
+      }
+      .profile-info h1 {
+        font-size: 24px;
+        margin-bottom: 6px;
+      }
+      .profile-info p {
+        color: #606770;
+        font-size: 15px;
+      }
+      .tabs {
+        display: flex;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        background: #fff;
+      }
+      .tabs div {
+        padding: 14px 20px;
+        cursor: pointer;
+        font-weight: 500;
+        flex-grow: 1;
+        text-align: center;
+        transition: background 0.3s ease;
+      }
+      .tabs div:hover {
+        background: #f0f2f5;
+      }
+      .tab-content {
+        padding: 20px;
+      }
+      .tab-content h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      p a {
+        color: black;
+      }
+
     </style>
-</head>
-<body>
-    <h1>Iam Sameer Panavoor</h1>
-</body>
+  </head>
+  <body>
+    <header class="top">
+      <section class="wrapper">
+        <span
+          >For more information : +91 9074741522 |
+          sameerpanavoor@gmail.com</span
+        >
+        <ul>
+          <small>Welcome Guest</small>
+          <li>
+            <a href="https://www.facebook.com/samee.tpb" target="_blank"
+              ><img src="assets/facebook.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/mondana_misteriosa/"
+              target="_blank"
+              ><img src="assets/instagram.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://youtube.com/@luxuryindians6843?si=B0f2Zc6XvvfNIpI0"
+              target="_blank"
+              ><img src="assets/youtube.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </section>
+    </header>
+
+    <header class="middle">
+      <section class="wrapper">
+        <h1>
+          <a href="https://www.facebook.com/samee.tpb">
+            <div class="img">
+              <img src="assets/sameer.png" alt="" />
+            </div>
+            <span>SAMEER PANAVOOR</span>
+          </a>
+        </h1>
+        <button
+          class="hamburger"
+          id="hamburgerBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="input">
+          <input type="text" placeholder="What are you looking for?" />
+          <select name="Categories" id="Categories">
+            <option value="All Categories">All Categories</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Comic">Comic</option>
+            <option value="Horror">Horror</option>
+            <option value="Scientific">Scientific</option>
+            <option value="Action">Action</option>
+            <option value="Thriller">Thriller</option>
+          </select>
+        </div>
+      </section>
+    </header>
+
+    <hr class="line" />
+    <ul class="menu">
+      <section class="wrapper">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sameer.html">ABOUT SAMEER</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="upcoming.html">UPCOMING BOOKS</a></li>
+        <li><a href="updates.html">UPDATES</a></li>
+
+        <!-- Clickable menu item -->
+        <li id="contactTrigger">CONTACT <b class="triangle"></b></li>
+
+        <li id="followTrigger">FOLLOW US <b class="triangle"></b></li>
+      </section>
+    </ul>
+
+    <!-- Submenu placed outside the UL -->
+    <!-- Outside the <ul class="menu"> -->
+    <div id="contactDropdown" class="dropdown-menu">
+      <ul>
+        <li><a href="mailto:sameerpanavoor@gmail.com">Email</a></li>
+        <li><a href="tel:+919074741522">Phone</a></li>
+        <li><a href="#">Address</a></li>
+      </ul>
+    </div>
+
+    <div id="followDropdown" class="dropdown-menu">
+      <ul>
+        <li><a href="https://www.instagram.com/mondana_misteriosa?igsh=ZGUzMzM3NWJiOQ==">Instagram</a></li>
+        <li><a href="https://www.facebook.com/samee.tpb?mibextid=ZbWKwL">Facebook</a></li>
+        <li><a href="https://youtube.com/@luxuryindians6843?si=rRBbYtFj_FnlGNCQ">Youtube</a></li>
+        <li><a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=sameer-a-s-a29420340">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <hr class="line" />
+
+    <section class="wrapper">
+      <div class="profile-container">
+        <div class="cover-photo"></div>
+
+        <div class="profile-section">
+          <div class="profile-pic"></div>
+          <div class="profile-info">
+            <h1>Sameer Panavoor</h1>
+            <p>Book Writer | Writer of Mondana Misteriosa</p>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <div onclick="showTab('about')">About</div>
+          <div onclick="showTab('photos')">Photos</div>
+          <div onclick="showTab('contact')">Contact</div>
+        </div>
+
+        <div class="tab-content" id="about">
+          <h2>About Me</h2>
+          <p>
+            Hello! I'm Sameer, a passionate sci-fi author from Kerala. I
+            specialize in building mysterious worlds, unexplained creatures, and
+            thrilling plots.
+          </p>
+        </div>
+
+        <div class="tab-content" id="photos" style="display: none">
+          <h2>Gallery</h2>
+          <div class="photos">
+            <img src="assets/bookf.jpg" alt="Book Front Cover" />
+            <img src="assets/bookb.jpg" alt="Book Back Cover" />
+          </div>
+        </div>
+
+        <div class="tab-content" id="contact" style="display: none">
+          <h2>Contact</h2>
+          <p>Email: <a href="sameerpanavoor@gmail.com">sameerpanavoor@gmail.com</a></p>
+          <p>Phone: <a href="+91 9074741522">9074741522</a></p>
+          <p>Instagram: <a href="https://www.instagram.com/samee_tpb?igsh=ZGUzMzM3NWJiOQ==">@samee_tpb</a></p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function showTab(tabId) {
+        document.querySelectorAll(".tab-content").forEach((tab) => {
+          tab.style.display = "none";
+        });
+        document.getElementById(tabId).style.display = "block";
+      }
+    </script>
+  </body>
 </html>

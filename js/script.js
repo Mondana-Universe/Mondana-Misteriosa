@@ -1,40 +1,64 @@
-    const reviews = [];
+document.addEventListener("DOMContentLoaded", function () {
+  // CONTACT DROPDOWN
+  const contactTrigger = document.getElementById("contactTrigger");
+  const contactDropdown = document.getElementById("contactDropdown");
 
-    document.getElementById('submit-review').addEventListener('click', function (e) {
-        e.preventDefault();
+  const followTrigger = document.getElementById("followTrigger");
+  const followDropdown = document.getElementById("followDropdown");
 
-        const name = document.getElementById('user_name').value.trim();
-        const rating = document.getElementById('rating').value;
-        const message = document.getElementById('message').value.trim();
+  // Utility to toggle dropdown and position it
+  function toggleDropdown(trigger, dropdown) {
+    const rect = trigger.getBoundingClientRect();
+    dropdown.style.top = `${rect.bottom + window.scrollY}px`;
+    dropdown.style.left = `${rect.left + window.scrollX}px`;
+    dropdown.classList.toggle("show");
+  }
 
-        if (!name || !message) {
-            alert("Please fill in all the fields.");
-            return;
-        }
+  // Close all dropdowns
+  function closeAllDropdowns() {
+    contactDropdown.classList.remove("show");
+    followDropdown.classList.remove("show");
+  }
 
-        const newReview = {
-            name,
-            rating,
-            message
-        };
+  contactTrigger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    const isVisible = contactDropdown.classList.contains("show");
+    closeAllDropdowns();
+    if (!isVisible) toggleDropdown(contactTrigger, contactDropdown);
+  });
 
-        reviews.push(newReview);
+  followTrigger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    const isVisible = followDropdown.classList.contains("show");
+    closeAllDropdowns();
+    if (!isVisible) toggleDropdown(followTrigger, followDropdown);
+  });
 
-        document.getElementById('user_name').value = '';
-        document.getElementById('rating').value = '1';
-        document.getElementById('message').value = '';
+  contactDropdown.addEventListener("click", (e) => e.stopPropagation());
+  followDropdown.addEventListener("click", (e) => e.stopPropagation());
 
-        appendReview(newReview); // Append just the new review
+  document.addEventListener("click", function () {
+    closeAllDropdowns();
+  });
+
+  const hamburger = document.getElementById("hamburgerBtn");
+  if (hamburger) {
+    hamburger.addEventListener("click", function () {
+      this.classList.toggle("active");
     });
+  }
 
-    function appendReview(review) {
-        const reviewsList = document.getElementById('reviews-list');
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <h4>By ${review.name}</h4>
-            <h5>${review.rating}/5 Rating</h5>
-            <p>${review.message}</p>
-        `;
-        reviewsList.appendChild(li);
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const menu = document.querySelector(".menu .wrapper");
+
+  hamburgerBtn.addEventListener("click", function () {
+    menu.classList.toggle("open");
+
+    // Disable scrolling when menu is open
+    if (menu.classList.contains("open")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
     }
-
+  });
+});
