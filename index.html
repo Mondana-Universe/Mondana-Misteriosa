@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mondana Misteriosa Official</title>
-    <link rel="icon" href="assets/sameer.png">
+    <link rel="icon" href="assets/sameer.png" />
     <link rel="icon" href="" />
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/script.js"></script>
@@ -13,8 +13,7 @@
     <header class="top">
       <section class="wrapper">
         <span
-          >For more information : +91 9074741522 |
-          sameerpnvr0@gmail.com</span
+          >For more information : +91 9074741522 | sameerpnvr0@gmail.com</span
         >
         <ul>
           <small>Welcome Guest</small>
@@ -104,10 +103,28 @@
 
     <div id="followDropdown" class="dropdown-menu">
       <ul>
-        <li><a href="https://www.instagram.com/mondana_misteriosa?igsh=ZGUzMzM3NWJiOQ==">Instagram</a></li>
-        <li><a href="https://www.facebook.com/samee.tpb?mibextid=ZbWKwL">Facebook</a></li>
-        <li><a href="https://youtube.com/@luxuryindians6843?si=rRBbYtFj_FnlGNCQ">Youtube</a></li>
-        <li><a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=sameer-a-s-a29420340">LinkedIn</a></li>
+        <li>
+          <a
+            href="https://www.instagram.com/mondana_misteriosa?igsh=ZGUzMzM3NWJiOQ=="
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a href="https://www.facebook.com/samee.tpb?mibextid=ZbWKwL"
+            >Facebook</a
+          >
+        </li>
+        <li>
+          <a href="https://youtube.com/@luxuryindians6843?si=rRBbYtFj_FnlGNCQ"
+            >Youtube</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=sameer-a-s-a29420340"
+            >LinkedIn</a
+          >
+        </li>
       </ul>
     </div>
 
@@ -119,10 +136,16 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/Mondana-Cover-Front.png" alt="Book-Front-Cover" />
+                <img
+                  src="assets/Mondana-Cover-Front.png"
+                  alt="Book-Front-Cover"
+                />
               </div>
               <div class="flip-card-back">
-                <img src="assets/Mondana-Cover-Back.png" alt="Book-Back-Cover" />
+                <img
+                  src="assets/Mondana-Cover-Back.png"
+                  alt="Book-Back-Cover"
+                />
               </div>
             </div>
           </div>
@@ -138,15 +161,16 @@
               <b>Author : </b
               ><a href="https://www.facebook.com/samee.tpb">SAMEER PANAVOOR</a>
             </li>
-            <li>
-              <b>Category : </b>Sci-Fi Fanatasy Mysterious Action Thriller
-            </li>
+            <li><b>Category : </b>Sci-Fi Fantasy Mysterious Action Thriller</li>
             <li><b>ISBN : </b>978-93-340-8099-5</li>
             <li><b>Binding : </b>Normal</li>
             <li><b>Publishing date : </b>August 2025</li>
             <li>
               <b>Publisher : </b
-              ><a href="https://www.instagram.com/era_books_publications?igsh=MXQycGlobGZidDJkdg==">ERA NEST</a>
+              ><a
+                href="https://www.instagram.com/era_books_publications?igsh=MXQycGlobGZidDJkdg=="
+                >ERA NEST</a
+              >
             </li>
             <li><b>Edition : </b>First</li>
             <li><b>No of pages : </b>274</li>
@@ -206,19 +230,29 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-              </select></label>
+              </select></label
+            >
 
             <label for="message">Your Review : </label>
-            <textarea name="message" id="message" style="resize: none;"></textarea>
+            <textarea
+              name="message"
+              id="message"
+              style="resize: none"
+            ></textarea>
             <button id="submit-review">Submit</button>
           </div>
           <div class="reviews">
             <h5>Reviews</h5>
             <ul id="reviews-list">
               <li>
-                <h4>By Thanseer</h4>
-                <h5>5/5 Rating</h5>
-                <p>Amazing book... Must read one....Loved it!!!!</p>
+                <h4>👤 Thanseer</h4>
+                <h5 class="star-rating">★ ★ ★ ★ ★</h5>
+                <p>
+                  📝 A brilliant mix of science and fantasy that keeps you hooked
+                  from start to finish. Mysterious, imaginative, and truly
+                  unforgettable. A must-read for anyone who loves stories that
+                  challenge the mind and spark the imagination.
+                </p>
               </li>
             </ul>
           </div>
@@ -226,7 +260,13 @@
       </section>
     </section>
     <script>
-      const reviews = [];
+      const reviewsList = document.getElementById("reviews-list");
+
+      // Load reviews from localStorage on page load
+      window.addEventListener("DOMContentLoaded", () => {
+        const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        savedReviews.forEach((review) => appendReview(review));
+      });
 
       document
         .getElementById("submit-review")
@@ -243,8 +283,14 @@
           }
 
           const newReview = { name, rating, message };
-          reviews.push(newReview);
 
+          // Save to localStorage
+          const existingReviews =
+            JSON.parse(localStorage.getItem("reviews")) || [];
+          existingReviews.push(newReview);
+          localStorage.setItem("reviews", JSON.stringify(existingReviews));
+
+          // Clear form
           document.getElementById("user_name").value = "";
           document.getElementById("rating").value = "1";
           document.getElementById("message").value = "";
@@ -252,14 +298,20 @@
           appendReview(newReview);
         });
 
+      // Converts numeric rating to star icons
+      function getStarRating(rating) {
+        const fullStar = "★ ";
+        const emptyStar = "☆ ";
+        return fullStar.repeat(rating) + emptyStar.repeat(5 - rating);
+      }
+
       function appendReview(review) {
-        const reviewsList = document.getElementById("reviews-list");
         const li = document.createElement("li");
         li.innerHTML = `
-      <h4>By ${review.name}</h4>
-      <h5>${review.rating}/5 Rating</h5>
-      <p>${review.message}</p>
-    `;
+    <h4>👤 ${review.name}</h4>
+    <h5 class="star-rating">${getStarRating(review.rating)}</h5>
+    <p>📝 ${review.message}</p>
+  `;
         reviewsList.appendChild(li);
       }
     </script>

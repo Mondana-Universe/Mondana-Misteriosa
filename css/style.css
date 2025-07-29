@@ -146,7 +146,7 @@ header.middle {
   position: sticky;
   z-index: 1000;
   top: 0;
-  background-color:#efefef;
+  background-color: #efefef;
 }
 
 header.middle section.wrapper {
@@ -459,7 +459,8 @@ section.review div.create-review #user_name {
 }
 
 section.review div.create-review #submit-review {
-  background-color: #9ace48;
+  /* background-color: #9ace48; */
+  background-color: #fb641b;
   color: white;
   font-family: Roboto Condensed;
   border: none;
@@ -478,16 +479,18 @@ section.review ul#reviews-list li {
   border-radius: 10px;
 }
 section.review ul#reviews-list h4 {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: Roboto Condensed;
-  font-weight: normal;
-  font-size: 18px;
-}
-section.review ul#reviews-list h5 {
-  font-family: Roboto Condensed;
-  font-weight: normal;
+  font-weight: Bold;
+  letter-spacing: 0.10em;
   font-size: 16px;
+}
+section.review ul#reviews-list h5.star-rating {
   margin: 10px 0;
+  color: gold;
+  font-size: 22px; /* adjust as needed */
+  margin: 4px 0;
+  letter-spacing: -2px;
 }
 section.review ul#reviews-list p {
   font-weight: normal;
@@ -692,7 +695,6 @@ section.updates .update p {
   height: 400px;
 }
 
-
 @media all and (max-width: 768px) {
   div.book section.wrapper {
     flex-wrap: wrap;
@@ -767,7 +769,7 @@ section.updates .update p {
     width: 100%;
     text-align: center;
   }
- 
+
   ul.menu section.wrapper.open {
     opacity: 1;
     visibility: visible;
